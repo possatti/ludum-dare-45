@@ -34,5 +34,6 @@ ui_restart={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_clear_color=Color( 0.529412, 0.807843, 0.980392, 1 )
 environment/default_environment="res://default_env.tres"

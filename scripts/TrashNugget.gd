@@ -41,7 +41,6 @@ const GRAVITY = 10
 export (Color) var color = null
 
 func _ready():
-	randomize()
 	var color_idx = randi() % len(COLOR_POOL)
 #	color = Color("#fea048")
 	color = COLOR_POOL[color_idx]

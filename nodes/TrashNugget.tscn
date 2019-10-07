@@ -5,7 +5,7 @@
 [node name="TrashNugget" type="Node2D"]
 position = Vector2( 86, 85 )
 script = ExtResource( 1 )
-color = Color( 0.858824, 0.666667, 0.65098, 1 )
+color = Color( 0.886275, 0.772549, 0.462745, 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
