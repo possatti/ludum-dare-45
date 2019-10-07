@@ -4,7 +4,7 @@ This is a game I made for Ludum Dare 45 (theme: start with nothing). In the game
 
 Tip: Just press the right arrow repeatedly from time to time in order to balance the tower and increase speed.
 
-I made the game using [Godot](https://godotengine.org/). You are not deaf, the game has no sound really. And I drew these amazingly beautiful graphics myself using inkscape... :D
+I made the game using [Godot](https://godotengine.org/). The font I used is ["pixelated" by Greenma201](https://www.dafont.com/pixelated.font). You are not deaf, the game has no sound really. And I drew these amazingly beautiful graphics myself using inkscape... :D
 
 ## Links
 
