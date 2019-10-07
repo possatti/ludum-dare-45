@@ -1,0 +1,55 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/Homeless.gd" type="Script" id=1]
+[ext_resource path="res://assets/throw_animation/throw-0.png" type="Texture" id=2]
+[ext_resource path="res://assets/throw_animation/throw-1.png" type="Texture" id=3]
+[ext_resource path="res://assets/throw_animation/throw-2.png" type="Texture" id=4]
+[ext_resource path="res://assets/throw_animation/throw-3.png" type="Texture" id=5]
+[ext_resource path="res://assets/throw_animation/throw-4.png" type="Texture" id=6]
+[ext_resource path="res://assets/walk_animation/walk-0.png" type="Texture" id=7]
+[ext_resource path="res://assets/walk_animation/walk-1.png" type="Texture" id=8]
+[ext_resource path="res://assets/walk_animation/walk-2.png" type="Texture" id=9]
+[ext_resource path="res://assets/walk_animation/walk-3.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": false,
+"name": "throw",
+"speed": 20.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[node name="Homeless" type="Node2D"]
+position = Vector2( 484, 548 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ThrowAnimation" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 54.1953, -286.822 )
+frames = SubResource( 1 )
+animation = "throw"
+frame = 4
+playing = true
+
+[node name="WalkAnimation" type="AnimatedSprite" parent="."]
+position = Vector2( -0.511703, -170.336 )
+frames = SubResource( 2 )
+animation = "walk"
+frame = 2
+playing = true
+
+[node name="Arm" type="Sprite" parent="."]
+position = Vector2( 54.5783, -287.623 )
+texture = ExtResource( 2 )
+[connection signal="animation_finished" from="ThrowAnimation" to="ThrowAnimation" method="set" binds= [ "visible", false ]]
