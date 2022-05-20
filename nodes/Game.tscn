@@ -100,4 +100,5 @@ rect_pivot_offset = Vector2( -523, 190 )
 custom_fonts/font = SubResource( 4 )
 text = "Press R to restart"
 align = 1
+
 [connection signal="trash_amount_changed" from="HomelessWithCart" to="." method="_on_HomelessWithCart_trash_amount_changed"]

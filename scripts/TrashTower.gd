@@ -5,6 +5,7 @@ signal collapsed
 const TRASH_NUGGET_SCENE = preload("res://nodes/TrashNugget.tscn")
 
 const N_COLS = 7
+const N_COLS_F = float(N_COLS)
 const COL_SPACING = 20
 const ROW_SPACING = 20
 
@@ -27,11 +28,11 @@ func _magic_add_trash(n=1):
 
 func _rearrange():
 	var pivot = Vector2.ZERO
-	var middle_col = ceil(N_COLS / 2)
+	var middle_col = ceil(N_COLS_F / 2)
 	for i in range(get_child_count()):
 		var trash = get_child(i)
 		var col = i % N_COLS
-		var row = floor(i / N_COLS)
+		var row = floor(i / N_COLS_F)
 
 		var middle_col_dist = (col - middle_col) * COL_SPACING
 
@@ -83,10 +84,10 @@ func is_inclination_ok():
 # =========================
 
 func get_rows_count():
-	return floor(get_child_count() / N_COLS) + 1
+	return floor(get_child_count() / N_COLS_F) + 1
 
 func get_height():
-	return floor(get_child_count() / N_COLS) * ROW_SPACING
+	return floor(get_child_count() / N_COLS_F) * ROW_SPACING
 
 func _process(delta):
 	if not has_collapsed:
